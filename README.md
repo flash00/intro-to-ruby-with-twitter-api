@@ -1,30 +1,19 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
-
 ### Purpose
-The Sinatra Skeleton:
+A Small Web Application Ruby Skeleton:
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+1. Provides a foundation for building a website that interacts with the Twitter API.
+2. Provides a basic model/view/controller (MVC) project to allow students to understand basic web design.
 
 ### Quickstart
 
-1.  `bundle install`
-2.  `shotgun config.ru`
-
-As needed, create models & migrations with the `rake` tasks:
-
+0.  Follow steps at the bottom of this README to create a Twitter Consumer Key/Secret
+1.  Clone repository: `cd ~/Documents; git clone https://github.com/pongo-pygmaeus/intro-to-ruby-with-twitter-api`
+2.  Use your terminal to access the newly created directory: `cd ~/Documents/intro-to-ruby-with-twitter-api`
+3.  Type `bundle install`
+4.  Make a new file called `.env`: `touch .env`
+5.  Open `.env` in a text editor and add the following keys
 ```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
+TWITTER_CONSUMER_KEY=[Your Twitter API Consumer Key from Twitter Developer Console]
+TWITTER_CONSUMER_SECRET=[Your Twitter API Consumer Secret from Twitter Developer Console]
 ```
-
-### Contributing
-
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
+Type `bundle exec shotgun`
