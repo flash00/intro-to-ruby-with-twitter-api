@@ -17,3 +17,12 @@ TWITTER_CONSUMER_KEY=[Your Twitter API Consumer Key from Twitter Developer Conso
 TWITTER_CONSUMER_SECRET=[Your Twitter API Consumer Secret from Twitter Developer Console]
 ```
 Type `bundle exec shotgun`
+
+### Twitter Developer Signup Steps
+
+1. Visit `https://dev.twitter.com/resources/signup`
+2. After signing up, visit `https://apps.twitter.com` 
+3. Click on your email address
+4. Click on the tab titled `Keys and Access Tokens`
+5. Observe the section of the page called `Application Settings`
+6. Take note of the fields called `Consumer Key (API Key)` and `Consumer Secret (API Secret)`. Use this information in step 5 of the `Quickstart` steps.
