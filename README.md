@@ -16,4 +16,4 @@ A Small Web Application Ruby Skeleton:
 TWITTER_CONSUMER_KEY=[Your Twitter API Consumer Key from Twitter Developer Console]
 TWITTER_CONSUMER_SECRET=[Your Twitter API Consumer Secret from Twitter Developer Console]
 ```
-6.  Type `bundle exec shotgun`
+Type `bundle exec shotgun`
