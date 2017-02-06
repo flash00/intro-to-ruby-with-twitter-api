@@ -1,5 +1,5 @@
 # DBC Intro to Ruby with the Twitter API
-## For use during "Intro to Ruby at Dev Bootcamp, San Francisco" Class
+## For use during "Intro to Ruby at Dev Bootcamp, San Francisco" class
 
 ### Purpose
 A Small Web Application Ruby Skeleton:
