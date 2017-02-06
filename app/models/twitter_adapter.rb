@@ -3,12 +3,14 @@ require 'uri'
 require 'net/http'
 require 'awesome_print'
 
+# Use this or gem from https://github.com/sferik/twitter
+
 module TwitterAdapter
 
   def self.search(search_string)
   
-    p bearer_token = generate_bearer_token
-    p search_string.gsub(/\s+/, "_")
+    bearer_token = generate_bearer_token
+    search_string.gsub(/\s+/, "_")
 
     url = URI("https://api.twitter.com/1.1/search/tweets.json?q=%2523#{search_string}&result_type=recent")
 
@@ -19,7 +21,7 @@ module TwitterAdapter
     request = Net::HTTP::Get.new(url)
     request["authorization"] = "Bearer #{bearer_token}"
 
-    ap response = JSON.parse(http.request(request).read_body)
+    response = JSON.parse(http.request(request).read_body)
 
   end
 

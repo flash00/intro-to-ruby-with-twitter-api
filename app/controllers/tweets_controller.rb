@@ -5,11 +5,7 @@ get '/tweets/search' do
 end
 
 post '/tweets/search' do
-  p params
-  TwitterAdapter::search(params[:search])
+  @search_string = params[:search]
+  @results = TwitterAdapter::search(@search_string)
   erb :"/tweets/results.html"
-end
-
-get '/tweets/results' do
-
 end
