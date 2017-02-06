@@ -11,7 +11,7 @@ A Small Web Application Ruby Skeleton:
 2.  Use your terminal to access the newly created directory: `cd ~/Documents/intro-to-ruby-with-twitter-api`
 3.  Type `bundle install`
 4.  Make a new file called `.env`: `touch .env`
-5.  Open `.env` in a text editor and add the following keys
+5.  Open `.env` in a text editor and add the following keys (DBC recommends either Sublime Text Editor or Atom)
 ```
 TWITTER_CONSUMER_KEY=[Your Twitter API Consumer Key from Twitter Developer Console]
 TWITTER_CONSUMER_SECRET=[Your Twitter API Consumer Secret from Twitter Developer Console]
