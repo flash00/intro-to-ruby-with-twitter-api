@@ -21,7 +21,8 @@ module TwitterAdapter
     request = Net::HTTP::Get.new(url)
     request["authorization"] = "Bearer #{bearer_token}"
 
-    response = JSON.parse(http.request(request).read_body)
+    response = JSON.parse(http.request(request).read_body)["statuses"]
+                   .map { |result| result["text"] }
 
   end
 
