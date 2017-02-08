@@ -10,7 +10,7 @@ module TwitterAdapter
   def self.search(search_string)
   
     bearer_token = generate_bearer_token
-    search_string.gsub(/\s+/, "_")
+    search_string.gsub(/\s+/, "%20")
 
     url = URI("https://api.twitter.com/1.1/search/tweets.json?q=%2523#{search_string}&result_type=recent")
 
