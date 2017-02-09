@@ -22,6 +22,11 @@ require 'erb'
 
 require 'dotenv'
 
+require 'base64'
+require 'uri'
+require 'net/http'
+require 'awesome_print'
+
 Dotenv.load
 
 # Some helper constants for path-centric logic

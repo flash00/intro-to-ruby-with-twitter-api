@@ -1,5 +1,3 @@
-require_relative "../models/twitter_adapter"
-
 get '/tweets/search' do
   erb :"/tweets/search.html"
 end

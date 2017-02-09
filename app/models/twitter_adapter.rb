@@ -1,8 +1,3 @@
-require 'base64'
-require 'uri'
-require 'net/http'
-require 'awesome_print'
-
 # Use this or gem from https://github.com/sferik/twitter
 
 module TwitterAdapter
