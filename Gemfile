@@ -19,6 +19,10 @@ gem 'dotenv'
 
 gem 'awesome_print'
 
+gem 'hirb'
+gem 'pry-byebug'
+gem 'httparty'
+
 group :test do
   gem 'database_cleaner', '~> 1.4.1'
   gem 'shoulda-matchers'

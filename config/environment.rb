@@ -27,6 +27,12 @@ require 'uri'
 require 'net/http'
 require 'awesome_print'
 
+require 'pry-byebug'
+
+require 'hirb'
+
+require 'httparty'
+
 Dotenv.load
 
 # Some helper constants for path-centric logic
