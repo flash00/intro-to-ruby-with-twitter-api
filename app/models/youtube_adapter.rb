@@ -25,7 +25,7 @@ private
 
   def self.parse_data(api_response)
     parsed_results = []
-    sampled_results = api_response['items'].sample(20)
+    sampled_results = api_response['items'].sample(21)
     sampled_results.each do |item|
        results = Hash.new
        results[:url] = "http://www.youtube.com/watch?v=#{item['id']['videoId']}"
