@@ -1,0 +1,11 @@
+<h3>Results for "<%=@search_string%>"</h3>
+<p>
+  <ul>
+    <% @results.each do |result| %>
+      <a href="<%=result[:url]%>"/>
+        <img src="<%=result[:thumbnail]%>">
+      </a>
+    <% end %>
+  </ul>
+</p>
+<a href="/youtube/search">Search for more vids!</a>

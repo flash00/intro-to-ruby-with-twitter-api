@@ -17,6 +17,7 @@ class YoutubeAdapter
                  key: ENV['YOUTUBE_API_KEY']
                  
   def self.custom_search( query_string )
+    # query_string.gsub!(/\s+/, "%20")
     parse_data(self.get('', query: { q: query_string }))
   end
 
