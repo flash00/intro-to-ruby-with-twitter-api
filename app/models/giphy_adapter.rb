@@ -26,9 +26,6 @@ class GiphyAdapter
     
     response["data"].map { |result| result["images"]["fixed_height"]["url"] }
   end
-
-# private
-  
 end
 
 
