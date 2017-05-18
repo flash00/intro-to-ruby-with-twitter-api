@@ -4,6 +4,6 @@ end
 
 post '/giphy/search' do
   @search_string = params[:search]
-  @results = GiphyAdapter.new.search(@search_string)
+  @results = GiphyAdapter.search(@search_string)
   erb :"/giphy/results.html"
 end

@@ -1,5 +1,6 @@
+API + HTTParty + Gem stuff = API GEM
 # Use this or gem from https://github.com/sferik/twitter
-# 
+#
 # Ways to interface with APIs in Ruby:
 # * 'net/http' core library
 # * 'httparty' gem
@@ -8,13 +9,13 @@
 module TwitterAdapter
 
   def self.search(search_string)
-  
+
     bearer_token = generate_bearer_token
     search_string.gsub(/\s+/, "%20")
 
     # URL = https://api.twitter.com... (Key is "how to find resource")
     # URN = tweets.json (What the thing is that we're actually looking for)
-    # URI = Both of the above since they both describe the resource we're trying to retrieve 
+    # URI = Both of the above since they both describe the resource we're trying to retrieve
 
     url = URI("https://api.twitter.com/1.1/search/tweets.json?q=%2523#{search_string}&result_type=recent")
 
@@ -23,7 +24,7 @@ module TwitterAdapter
 
     # DON'T DO THIS IN PRACTICE!!
     # Should be something more like...
-    # 
+    #
     # http.use_ssl = true
     # pem = File.read("/path/to/my.pem")
     # http.cert = OpenSSL::X509::Certificate.new(pem)
@@ -36,13 +37,13 @@ module TwitterAdapter
     request["authorization"] = "Bearer #{bearer_token}"
 
     # binding.pry
-    
+
     response = JSON.parse(http.request(request).read_body)["statuses"]
                    .map { |result| result["text"] }
 
   end
 
-private 
+private
 
   def self.generate_bearer_token
 

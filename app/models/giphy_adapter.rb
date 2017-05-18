@@ -1,35 +1,9 @@
-# response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
-
-# puts response.body, response.code, response.message, response.headers.inspect
-
-# Or wrap things up in your own class
-class GiphyAdapter
-
+module GiphyAdapter
   include HTTParty
 
-  base_uri 'api.giphy.com'
-  # For the Giphy Adapter class, make the endpoint
-  # equal to whatever is called with
-
-  def initialize
-    @api_key = ENV['GIPHY_API_KEY'] 
-  end
-
-  def search(search_string)
-    response = self.class.get("/v1/gifs/search", 
-                   { query: 
-                     { 
-                       q: search_string, 
-                       api_key: @api_key
-                     }
-                   })
-    
-    response["data"].map { |result| result["images"]["fixed_height"]["url"] }
+  def self.search(search_string)
+    options  = { query: { q: search_string, api_key: ENV['GIPHY_API_KEY'] } }
+    response = HTTParty.get('http://api.giphy.com/v1/gifs/search', options)
+    p results  = response["data"].map { |result| result["images"]["fixed_height"]["url"]}
   end
 end
-
-
-
-
-
-

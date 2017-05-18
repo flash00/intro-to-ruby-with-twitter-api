@@ -14,7 +14,6 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'shotgun'
-
 gem 'dotenv'
 
 gem 'awesome_print'
