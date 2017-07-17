@@ -4,7 +4,7 @@
 ### Purpose
 A Small Web Application Ruby Skeleton:
 
-1. Provides a foundation for building a website that interacts with the Twitter API.
+1. Provides a foundation for building a website that interacts with the Twitter API. **LATEST** Also includes a number of implementations of Giphy and YouTube API as well. 
 2. Provides a basic model/view/controller (MVC) project to allow students to understand basic web design.
 
 ### Quickstart
